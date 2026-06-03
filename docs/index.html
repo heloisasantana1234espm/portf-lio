@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Heloísa de Araújo Santana | Portfólio</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Josefin Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ==================================================
+PALETA
+#0A3323
+#839958
+#F7F4D5
+#D3968C
+#105666
+================================================== */
+
+:root{
+    --verde-escuro:#0A3323;
+    --verde-claro:#839958;
+    --creme:#F7F4D5;
+    --rosa:#D3968C;
+    --azul:#105666;
+}
+
+/* ==================================================
+TIPOGRAFIA
+================================================== */
+
+body{
+    font-family:'Josefin Sans', sans-serif;
+    background:#F7F4D5;
+    color:var(--verde-escuro);
+    overflow-x:hidden;
+    line-height:1.8;
+
+    background-image:
+    radial-gradient(
+    rgba(211,150,140,.08) 1px,
+    transparent 1px
+    );
+    background-size:20px 20px;
+}
+
+h1,h2,h3,h4,h5{
+    font-family:"Amoresa","Cormorant Garamond",serif;
+}
+
+/* ==================================================
+ANIMAÇÕES
+================================================== */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1s ease forwards;
+}
+
+.delay-1{
+    animation-delay:.2s;
+}
+
+.delay-2{
+    animation-delay:.4s;
+}
+
+.delay-3{
+    animation-delay:.6s;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ==================================================
+NAVBAR
+================================================== */
+
+.navbar{
+    background:rgba(10,51,35,.95);
+    backdrop-filter:blur(10px);
+}
+
+.navbar-brand,
+.nav-link{
+    color:white !important;
+}
+
+.nav-link:hover{
+    color:var(--rosa) !important;
+}
+
+/* ==================================================
+HERO
+================================================== */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(10,51,35,.55),
+    rgba(10,51,35,.45)
+    ),
+    url('perfil.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    color:white;
+    font-size:clamp(3rem,8vw,6rem);
+}
+
+.hero p{
+    color:var(--creme);
+    font-size:1.2rem;
+}
+
+.hero-badge{
+    background:var(--rosa);
+    color:white;
+    font-weight:400;
+    padding:.8rem 1rem;
+}
+
+/* ==================================================
+SEÇÕES
+================================================== */
+
+section{
+    padding:120px 0;
+}
+
+.section-title{
+    font-size:3rem;
+    margin-bottom:50px;
+}
+
+/* ==================================================
+SOBRE
+================================================== */
+
+.sobre-card{
+    background:white;
+    border:none;
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.perfil-img{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+/* ==================================================
+PROJETOS
+================================================== */
+
+.card{
+    border:none;
+    border-radius:24px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.project-image{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.card:hover .project-image{
+    transform:scale(1.05);
+}
+
+.badge-custom{
+    background:var(--verde-claro);
+    color:white;
+    font-weight:400;
+}
+
+.btn-custom{
+    background:var(--azul);
+    color:white;
+    border:none;
+}
+
+.btn-custom:hover{
+    background:var(--verde-escuro);
+    color:white;
+}
+
+/* ==================================================
+CONTATO
+================================================== */
+
+.contato{
+    background:var(--verde-escuro);
+    color:white;
+}
+
+.contato a{
+    color:var(--creme);
+    text-decoration:none;
+}
+
+.contato a:hover{
+    color:var(--rosa);
+}
+
+footer{
+    background:#061f15;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+
+<a class="navbar-brand" href="#">
+Heloísa Santana
+</a>
+
+<button class="navbar-toggler bg-light"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#sobre">Sobre</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#projetos">Projetos</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contato">Contato</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content fade-up">
+
+<span class="badge hero-badge mb-4">
+Cinema • Direção • Fotografia • Roteiro
+</span>
+
+<h1>
+Heloísa de Araújo Santana
+</h1>
+
+<p class="mt-4">
+Estudante de Cinema e Audiovisual na ESPM.
+Narrativas visuais inspiradas pela memória,
+pela observação do cotidiano e pela potência
+das imagens em movimento.
+</p>
+
+<a href="#projetos" class="btn btn-light btn-lg mt-4">
+Ver Projetos
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section id="sobre">
+
+<div class="container">
+
+<h2 class="section-title text-center fade-up">
+Sobre Mim
+</h2>
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-5 fade-up">
+
+<img
+src="helo.jpeg"
+alt="Heloísa"
+class="perfil-img">
+
+</div>
+
+<div class="col-lg-7 fade-up delay-1">
+
+<div class="sobre-card">
+
+<p>
+Nasci em Salvador, Bahia, e atualmente curso
+Cinema e Audiovisual na ESPM em São Paulo.
+</p>
+
+<p>
+Tenho interesse principalmente pelas áreas de
+roteiro, direção e fotografia, explorando
+formas de transformar observações cotidianas
+em experiências audiovisuais sensíveis.
+</p>
+
+<p>
+Meu trabalho busca dialogar com a memória,
+com os afetos e com a construção de atmosferas,
+inspirado pela fotografia analógica e pelo
+cinema de autor.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJETOS -->
+
+<section id="projetos">
+
+<div class="container">
+
+<h2 class="section-title text-center fade-up">
+Projetos
+</h2>
+
+<div class="row g-4">
+
+<!-- DIÁLOGO -->
+
+<div class="col-md-4 col-sm-6">
+
+<div class="card h-100 fade-up">
+
+<a href="https://youtu.be/WC1NE0Jm7Hc" target="_blank">
+<img src="dialogo.jpeg"
+alt="Diálogo"
+class="project-image">
+</a>
+
+<div class="card-body">
+
+<span class="badge badge-custom mb-3">
+Curta-metragem
+</span>
+
+<h3>Diálogo</h3>
+
+<p>
+Adaptação do conto “Diálogo”,
+de Caio Fernando de Abreu.
+</p>
+
+<a href="https://youtu.be/WC1NE0Jm7Hc"
+target="_blank"
+class="btn btn-custom">
+Assistir
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- VILAREJO -->
+
+<div class="col-md-4 col-sm-6">
+
+<div class="card h-100 fade-up delay-1">
+
+<a href="https://youtu.be/rI7DV6RaBIE" target="_blank">
+<img src="vilarejo.jpeg"
+alt="Vilarejo"
+class="project-image">
+</a>
+
+<div class="card-body">
+
+<span class="badge badge-custom mb-3">
+Videoclipe
+</span>
+
+<h3>Vilarejo</h3>
+
+<p>
+Produzido em Paranapiacaba para a música
+“Vilarejo”, de Marisa Monte.
+Uma narrativa sobre memória, pertencimento
+e reencontro.
+</p>
+
+<a href="https://youtu.be/rI7DV6RaBIE"
+target="_blank"
+class="btn btn-custom">
+Assistir
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- DOMINGO DE SOL -->
+
+<div class="col-md-4 col-sm-6">
+
+<div class="card h-100 fade-up delay-2">
+
+<a href="https://youtu.be/QSuNg-Goqxw" target="_blank">
+<img src="domingo.jpeg"
+alt="Um Domingo de Sol"
+class="project-image">
+</a>
+
+<div class="card-body">
+
+<span class="badge badge-custom mb-3">
+Mini Documentário
+</span>
+
+<h3>Um Domingo de Sol</h3>
+
+<p>
+Cenas capturadas em um domingo ensolarado
+de outono no Parque Ibirapuera.
+</p>
+
+<a href="https://youtu.be/QSuNg-Goqxw"
+target="_blank"
+class="btn btn-custom">
+Assistir
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTATO -->
+
+<section class="contato" id="contato">
+
+<div class="container text-center">
+
+<h2 class="section-title">
+Contato
+</h2>
+
+<p>
+✉
+<a href="mailto:heloisadearaujosantana@gmail.com">
+heloisadearaujosantana@gmail.com
+</a>
+</p>
+
+<p>
+📷
+<a href="https://instagram.com/_helosantanaa" target="_blank">
+@_helosantanaa
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 • Heloísa de Araújo Santana
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
